@@ -12,6 +12,7 @@ typedef struct {
    int nimages;
    int nrows;
    int ncols;
+   int length;
    unsigned char *data;
 } IDX3_DATA ;
 
