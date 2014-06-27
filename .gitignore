@@ -1,5 +1,6 @@
 
 src/readlabels
+src/readimages
 src/*.o
 
 readlabels
