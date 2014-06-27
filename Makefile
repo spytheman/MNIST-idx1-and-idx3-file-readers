@@ -1,6 +1,4 @@
-
-readlabels: src/readlabels
-	cp src/readlabels readlabels
+CPPFLAGS=-g
 
 src/readlabels: src/readlabels.c
 
@@ -12,3 +10,10 @@ get_datasets:
 clean:
 	rm -rf src/readlabels readlabels
 
+
+test_readlabels_test: src/readlabels
+	@src/readlabels datasets/t10k-labels-idx1-ubyte
+
+test_readlabels_train: readlabels
+	@src/readlabels datasets/train-labels-idx1-ubyte
+	
