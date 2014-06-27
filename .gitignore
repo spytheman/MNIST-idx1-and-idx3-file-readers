@@ -1,4 +1,6 @@
 
 src/readlabels
+src/*.o
+
 readlabels
 datasets/*
