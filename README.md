@@ -8,10 +8,12 @@ Usage:
 ===============
 
 To download the mnist database files:
-    make get_datasets ;
+
+    make get_datasets
 
 To build the C examples:
-    make ;
+
+    make
 
 
 Source structure:
