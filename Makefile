@@ -23,4 +23,4 @@ test_readlabels_test: src/readlabels
 
 test_readlabels_train: readlabels
 	@src/readlabels datasets/train-labels-idx1-ubyte
-	
+
