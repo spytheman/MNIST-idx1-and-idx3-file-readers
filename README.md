@@ -2,3 +2,11 @@ MNIST-idx1-and-idx3-file-readers
 ================================
 
 Simple C reader functions for the MNIST database of handwritten digits
+
+
+See the src/idx.h and src/idx.c for the IDX reader implementations.
+
+See src/readimages.c for sample usage of the fread_idx3_file() function - the example just dumps the data from the given IDX3 file, as stream of ASCII formatted pseudo pictures in stdout).
+
+See src/readlabels.c for sample usage of the fread_idx1_file() function - it just dumps each of the labels in the given IDX1 label file, each label on its own line, on stdout.
+
