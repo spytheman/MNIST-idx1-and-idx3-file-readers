@@ -1,7 +1,8 @@
 CPPFLAGS=-g
 
-src/readlabels: src/readlabels.c src/idx.o
+src/readlabels: src/readlabels.o src/idx.o
 
+src/readlabels.o: src/readlabels.c src/idx.h
 src/idx.o: src/idx.c src/idx.h
 
 .PHONY: clean get_datasets
