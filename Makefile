@@ -1,6 +1,8 @@
 CPPFLAGS=-g
 
-src/readlabels: src/readlabels.c
+src/readlabels: src/readlabels.c src/idx.o
+
+src/idx.o: src/idx.c src/idx.h
 
 .PHONY: clean get_datasets
 
@@ -8,7 +10,7 @@ get_datasets:
 	mkdir -p datasets/; cd datasets/; wget -i ../mnist.links; gunzip *.gz;
 
 clean:
-	rm -rf src/readlabels readlabels
+	rm -rf src/readlabels src/*.o
 
 
 test_readlabels_test: src/readlabels
