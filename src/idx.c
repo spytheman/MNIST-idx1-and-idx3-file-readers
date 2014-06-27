@@ -5,7 +5,7 @@
 #include "idx.h"
 
 int fread_idx1_file( char *slabelfname, IDX1_DATA *idxdata){
-   FILE *f = fopen(slabelfname, "r+");
+   FILE *f = fopen(slabelfname, "r");
    if(!f){
       return 0;
    }
