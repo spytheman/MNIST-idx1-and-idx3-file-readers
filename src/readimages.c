@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>
-#include <arpa/inet.h>
 #include "idx.h"
 
 int main(int argc, char **argv){
@@ -11,14 +9,13 @@ int main(int argc, char **argv){
       exit(1);
    }
    
-   char *slabelfname = argv[1];
+   char *sfilename = argv[1];
    
    IDX3_DATA idxdata;
-   if(!fread_idx3_file( slabelfname, &idxdata)){
-      printf("The datafile '%s' is not a valid IDX3 file.\n", slabelfname);
+   if(!fread_idx3_file( sfilename, &idxdata)){
+      printf("The datafile '%s' is not a valid IDX3 file.\n", sfilename);
       exit(2);
    }
-   //printf("Length: %d\n", idxdata.length);
    
    int i;
    int x;
@@ -32,7 +29,6 @@ int main(int argc, char **argv){
       for(y=0;y<idxdata.nrows;y++){
          rbase = ibase + y*idxdata.ncols;
          for(x=0;x<idxdata.ncols;x++){
-            //      printf("DATA[%05d] = %02d\n", i, idxdata.data[i]);
             pxl = idxdata.data[ rbase + x ];
             if(pxl){
                printf("%02X", pxl);
@@ -47,4 +43,3 @@ int main(int argc, char **argv){
    
    return 0;
 }
-

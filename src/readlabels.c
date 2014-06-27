@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>
-#include <arpa/inet.h>
 #include "idx.h"
 
 int main(int argc, char **argv){
@@ -18,10 +16,9 @@ int main(int argc, char **argv){
       printf("The datafile '%s' is not a valid IDX_1 file.\n", slabelfname);
       exit(2);
    }
-   //printf("Length: %d\n", idxdata.length);
+   
    int i;
    for(i=0;i<idxdata.length;i++){
-//      printf("DATA[%05d] = %02d\n", i, idxdata.data[i]);
       printf("%d\n", idxdata.data[i]);
    }
    
