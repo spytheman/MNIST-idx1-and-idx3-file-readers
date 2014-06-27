@@ -17,5 +17,6 @@ typedef struct {
 } IDX3_DATA ;
 
 int fread_idx1_file( char *slabelfname, IDX1_DATA *idxdata);
+int fread_idx3_file( char *slabelfname, IDX3_DATA *idxdata);
 
 #endif  /* __IDX_H_ENTRY_H__ */
